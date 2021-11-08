@@ -10,15 +10,26 @@ import MiddleCard from '../../components/MiddleCard';
 import './styles.css';
 
 export default function Index() {
-    const { location, grantedAccessToLocation } = useLocation();
     const { weatherInfo } = useWeather();
-
-
+    
     return (
         <div className='container'>
             <TopCard weatherInfo={weatherInfo} />
-            <MiddleCard weatherInfo={weatherInfo} />
-            <Skeleton count={3} />
+            <MiddleCard 
+                weatherInfo={weatherInfo}
+                firstIcon='FaTemperatureHigh'
+                secondIcon='FaTemperatureLow'
+                thirdIcon='WiSmallCraftAdvisory'
+                text='Máximas e mínimas'
+                isTemp={true}
+             />
+            <MiddleCard 
+                weatherInfo={weatherInfo}
+                firstIcon='BsFillSunriseFill'
+                secondIcon='BsFillSunsetFill'
+                thirdIcon='BsSun'
+                text='Nascer e pôr do sol'
+             />
         </div>
     )
 }

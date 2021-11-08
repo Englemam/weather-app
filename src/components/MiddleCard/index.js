@@ -1,26 +1,35 @@
 import React from 'react'
-import { FaTemperatureHigh, FaTemperatureLow } from "react-icons/fa";
-import { WiSmallCraftAdvisory } from "react-icons/wi";
+import { IconGenerator } from '../../utils/iconGenerator'
 import './styles.css';
 
-export default function Index({ weatherInfo }) {
+export default function Index({ weatherInfo, firstIcon, secondIcon, thirdIcon, text, isTemp }) {
 
     return (
         <div className='middle-card'>
-            <span>Máximas e mínimas</span>
+            <span>{text}</span>
             <div className='main-info-container'>
             <div className='temp-info-container'>
                 <div className='temp-info'>
-                    <FaTemperatureHigh />
-                    <span>{weatherInfo.tempMax}</span>
+                    {IconGenerator(firstIcon)}
+                    {
+                      isTemp ?  
+                      (<span>{weatherInfo.tempMax}</span>) : (
+                        <span>{new Date(weatherInfo.sunrise).toLocaleTimeString()}</span>
+                      )  
+                    }
                 </div>
                 <div className='temp-info'>
-                    <FaTemperatureLow />
-                    <span>{weatherInfo.tempMin}</span>
+                    {IconGenerator(secondIcon)}
+                    {
+                      isTemp ?  
+                      (<span>{weatherInfo.tempMin}</span>) : (
+                        <span>{new Date(weatherInfo.sunset).toLocaleTimeString()}</span>
+                      )  
+                    }
                 </div>
             </div>
             <div>
-                <WiSmallCraftAdvisory size={60} />
+                {IconGenerator(thirdIcon)}
             </div>
             </div>
         </div>
