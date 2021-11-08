@@ -1,0 +1,47 @@
+@import '../../utils/cssVariables.scss';
+
+.middle-card {
+    border-radius: 20px;
+    background-color: $whiteColor;
+
+    width: 100%;
+    height: 120px;
+    padding: 25px 50px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 1px 7px 24px -4px rgba(0,0,0,0.9); 
+    box-shadow: 1px 7px 24px -4px rgba(0,0,0,0.9);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        font-size: 26px;
+    }
+}
+
+.main-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.temp-info-container {
+    display: flex;
+    flex-direction: row; 
+}
+
+.temp-info {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+
+    span {
+        font-size: 32px;
+        color: $darkColor;
+    }
+}

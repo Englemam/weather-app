@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.css';
 
 export default function Index({ weatherInfo }) {
-    console.log('===props aqui', weatherInfo)
 
     return (
         <div className='top-card'>

@@ -1,0 +1,68 @@
+.middle-card {
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+  height: 120px;
+  padding: 25px 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 1px 7px 24px -4px rgba(0, 0, 0, 0.9);
+  box-shadow: 1px 7px 24px -4px rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.middle-card span {
+  font-size: 26px;
+}
+
+.main-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.temp-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.temp-info {
+  margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.temp-info span {
+  font-size: 32px;
+  color: #0E121E;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -5,6 +5,7 @@ import useLocation from '../../hooks/useLocation';
 import useWeather from '../../hooks/useWeather';
 
 import TopCard from '../../components/TopCard';
+import MiddleCard from '../../components/MiddleCard';
 
 import './styles.css';
 
@@ -12,12 +13,11 @@ export default function Index() {
     const { location, grantedAccessToLocation } = useLocation();
     const { weatherInfo } = useWeather();
 
-    console.log('===weatherInfo', weatherInfo)
-
 
     return (
         <div className='container'>
             <TopCard weatherInfo={weatherInfo} />
+            <MiddleCard weatherInfo={weatherInfo} />
             <Skeleton count={3} />
         </div>
     )
