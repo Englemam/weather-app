@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
 import useLocation from '../hooks/useLocation';
-
-import { api } from '../services/api';
+import { fetchCurrentWeatherInfo } from '../services/weatherServices';
 
 const WeatherContext = createContext({});
 
@@ -11,17 +10,20 @@ export const WeatherProvider = ({ children }) => {
 
 
     const fetchWeatherInfo = async () => {
-        const res = await api.get(`weather?lat=${location.lat}&lon=${location.long}&appid=9997c56866a63215f905efd1be2db505&lang=pt_br&units=metric`)
-
-        setWeatherInfo({
-            cityName: res.data.name,
-            country: res.data.sys.country,
-            windSpeed: res.data.wind.speed,
-            temperature: res.data.main.temp,
-            feelsLike: res.data.main.feels_like,
-            tempMax: res.data.main.temp_max,
-            tempMin: res.data.main.temp_min
-        })
+        const response = await fetchCurrentWeatherInfo(location);
+        if(response.status === 200){
+            setWeatherInfo({
+                cityName: response.data.name,
+                country: response.data.sys.country,
+                windSpeed: response.data.wind.speed,
+                temperature: response.data.main.temp,
+                feelsLike: response.data.main.feels_like,
+                tempMax: response.data.main.temp_max,
+                tempMin: response.data.main.temp_min,
+                iconName: response.data.weather[0].icon,
+                description: response.data.weather[0].description
+            })
+        }
     }
 
     useEffect(() => {

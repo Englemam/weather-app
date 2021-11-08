@@ -4,6 +4,9 @@ import Skeleton from 'react-loading-skeleton';
 import useLocation from '../../hooks/useLocation';
 import useWeather from '../../hooks/useWeather';
 
+import TopCard from '../../components/TopCard';
+
+import './styles.css';
 
 export default function Index() {
     const { location, grantedAccessToLocation } = useLocation();
@@ -13,8 +16,8 @@ export default function Index() {
 
 
     return (
-        <div>
-            <h1>home page goes here</h1>
+        <div className='container'>
+            <TopCard weatherInfo={weatherInfo} />
             <Skeleton count={3} />
         </div>
     )

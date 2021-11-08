@@ -1,0 +1,84 @@
+.top-card {
+  border-radius: 20px;
+  background-color: white;
+  width: 100%;
+  height: 120px;
+  padding: 25px 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 1px 7px 24px -4px rgba(0, 0, 0, 0.9);
+  box-shadow: 1px 7px 24px -4px rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.city-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.city-container span {
+  color: #0E121E;
+  font-size: 26px;
+}
+
+.degree-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.degree-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.degree-details .current-degree {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.degree-details .feels-like {
+  font-size: 14px;
+  font-weight: 300;
+  color: #A5A9B2;
+  text-align: start;
+}
+
+.sky-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sky-info span {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=styles.css.map */

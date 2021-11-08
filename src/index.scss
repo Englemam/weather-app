@@ -9,7 +9,10 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: $blueColor;
+    background-color: $greyColor;
+
+    display: flex;
+    justify-content: center;
   }
   
   code {
