@@ -17,17 +17,16 @@ export const LocationProvider = ({ children }) => {
       });
 
     } else {
-      console.log('===error getting location')
+      alert('Falha ao buscar localização do usuário!')
     }
 
   }
 
   useEffect(() => {
     if ("geolocation" in navigator) {
-      console.log("Available");
       setGrantedAccessToLocation(true);
     } else {
-      console.log("Not Available");
+      alert('Oops! Usuário não deu permissão de localização!')
       setGrantedAccessToLocation(false);
     }
     getUserLocation()
