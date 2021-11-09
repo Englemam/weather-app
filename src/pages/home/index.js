@@ -5,7 +5,7 @@ import useLocation from '../../hooks/useLocation';
 import useWeather from '../../hooks/useWeather';
 
 import TopCard from '../../components/TopCard';
-import MiddleCard from '../../components/MiddleCard';
+import MainCard from '../../components/MainCard';
 
 import './styles.css';
 
@@ -15,7 +15,7 @@ export default function Index() {
     return (
         <div className='container'>
             <TopCard weatherInfo={weatherInfo} />
-            <MiddleCard 
+            <MainCard 
                 weatherInfo={weatherInfo}
                 firstIcon='FaTemperatureHigh'
                 secondIcon='FaTemperatureLow'
@@ -23,12 +23,12 @@ export default function Index() {
                 text='Máximas e mínimas'
                 isTemp={true}
              />
-            <MiddleCard 
+            <MainCard 
                 weatherInfo={weatherInfo}
-                firstIcon='BsFillSunriseFill'
-                secondIcon='BsFillSunsetFill'
-                thirdIcon='BsSun'
-                text='Nascer e pôr do sol'
+                firstIcon='WiHumidity'
+                secondIcon='WiDayWindy'
+                thirdIcon='WiCloudyWindy'
+                text='Vento e humidade'
              />
         </div>
     )

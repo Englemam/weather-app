@@ -15,8 +15,7 @@ export const WeatherProvider = ({ children }) => {
             setWeatherInfo({
                 cityName: response.data.name,
                 country: response.data.sys.country,
-                sunrise: response.data.sys.sunrise,
-                sunset: response.data.sys.sunset,
+                humidity: response.data.main.humidity,
                 windSpeed: response.data.wind.speed,
                 temperature: response.data.main.temp,
                 feelsLike: response.data.main.feels_like,

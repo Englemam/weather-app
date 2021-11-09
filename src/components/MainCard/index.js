@@ -1,8 +1,10 @@
 import React from 'react'
+import Skeleton from 'react-loading-skeleton'
 import { IconGenerator } from '../../utils/iconGenerator'
 import './styles.css';
 
 export default function Index({ weatherInfo, firstIcon, secondIcon, thirdIcon, text, isTemp }) {
+
 
     return (
         <div className='middle-card'>
@@ -13,8 +15,8 @@ export default function Index({ weatherInfo, firstIcon, secondIcon, thirdIcon, t
                     {IconGenerator(firstIcon)}
                     {
                       isTemp ?  
-                      (<span>{weatherInfo.tempMax}</span>) : (
-                        <span>{new Date(weatherInfo.sunrise).toLocaleTimeString()}</span>
+                      (<span>{weatherInfo.tempMax || <Skeleton />}</span>) : (
+                        <span>{weatherInfo.humidity}%</span>
                       )  
                     }
                 </div>
@@ -23,7 +25,7 @@ export default function Index({ weatherInfo, firstIcon, secondIcon, thirdIcon, t
                     {
                       isTemp ?  
                       (<span>{weatherInfo.tempMin}</span>) : (
-                        <span>{new Date(weatherInfo.sunset).toLocaleTimeString()}</span>
+                        <span>{weatherInfo.windSpeed}km/h</span>
                       )  
                     }
                 </div>
