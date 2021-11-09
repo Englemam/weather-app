@@ -2,7 +2,7 @@
 
 Run the app locally or visit it at https://weather-app-kohl-two.vercel.app/ to check what the weather is like! (Don't forget to grant location permission!)
 
-[![Capturar.png](https://i.postimg.cc/j2rVzgLr/Capturar.png)](https://postimg.cc/LYv0SVty)
+![](https://i.postimg.cc/j2rVzgLr/Capturar.png)
 
 ## Available Scripts
 
