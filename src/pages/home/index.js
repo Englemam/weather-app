@@ -1,7 +1,4 @@
 import React from 'react'
-import Skeleton from 'react-loading-skeleton';
-
-import useLocation from '../../hooks/useLocation';
 import useWeather from '../../hooks/useWeather';
 
 import TopCard from '../../components/TopCard';
@@ -11,25 +8,25 @@ import './styles.css';
 
 export default function Index() {
     const { weatherInfo } = useWeather();
-    
+
     return (
         <div className='container'>
             <TopCard weatherInfo={weatherInfo} />
-            <MainCard 
+            <MainCard
                 weatherInfo={weatherInfo}
                 firstIcon='FaTemperatureHigh'
                 secondIcon='FaTemperatureLow'
                 thirdIcon='WiSmallCraftAdvisory'
                 text='Máximas e mínimas'
                 isTemp={true}
-             />
-            <MainCard 
+            />
+            <MainCard
                 weatherInfo={weatherInfo}
                 firstIcon='WiHumidity'
                 secondIcon='WiDayWindy'
                 thirdIcon='WiCloudyWindy'
                 text='Vento e humidade'
-             />
+            />
         </div>
     )
 }

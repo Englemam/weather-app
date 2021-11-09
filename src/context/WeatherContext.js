@@ -11,7 +11,7 @@ export const WeatherProvider = ({ children }) => {
 
     const fetchWeatherInfo = async () => {
         const response = await fetchCurrentWeatherInfo(location);
-        if(response.status === 200){
+        if (response.status === 200) {
             setWeatherInfo({
                 cityName: response.data.name,
                 country: response.data.sys.country,
@@ -28,7 +28,7 @@ export const WeatherProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        if(grantedAccessToLocation && location?.lat && location?.long){
+        if (grantedAccessToLocation && location?.lat && location?.long) {
             fetchWeatherInfo();
         }
     }, [grantedAccessToLocation, location])
@@ -36,7 +36,7 @@ export const WeatherProvider = ({ children }) => {
 
     return (
         <WeatherContext.Provider
-            value={{ 
+            value={{
                 weatherInfo
             }}
         >
