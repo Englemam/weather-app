@@ -15,7 +15,7 @@ export default function Index({ weatherInfo }) {
                 </div>
                 <div className='sky-info'>
                     <span className='sky-info-description'>{weatherInfo.description}</span>
-                    <img src={`http://openweathermap.org/img/wn/${weatherInfo.iconName}.png`} alt='weather icon'/>
+                    <img src={`http://openweathermap.org/img/wn/${weatherInfo.iconName}.png`} alt='ícone de clima'/>
                 </div>
             </div>
         </div>
