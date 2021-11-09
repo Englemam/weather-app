@@ -2,8 +2,7 @@
 
 Run the app locally or visit it at https://weather-app-kohl-two.vercel.app/ to check what the weather is like! (Don't forget to grant location permission!)
 
-![](https://i.postimg.cc/j2rVzgLr/Capturar.png)
-<img src="https://i.postimg.cc/j2rVzgLr/Capturar.png" width="500" height="800" />
+<img src="https://firebasestorage.googleapis.com/v0/b/greenapp-9a3e8.appspot.com/o/Capturar.PNG?alt=media&token=be1e028d-15a6-4b27-bb74-6ef2d84b8811" width="1100" height="800" />
 
 ## Available Scripts
 
