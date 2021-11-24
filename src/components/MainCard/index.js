@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { IconGenerator } from '../../utils/iconGenerator'
 import './styles.css';
 
@@ -35,4 +36,14 @@ export default function Index({ weatherInfo, firstIcon, secondIcon, thirdIcon, t
       </div>
     </div>
   )
+}
+
+Index.propTypes = {
+  weatherInfo: PropTypes.object.isRequired,
+  firstIcon: PropTypes.string.isRequired,
+  secondIcon: PropTypes.string.isRequired,
+  thirdIcon: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  isTemp: PropTypes.bool,
+
 }
