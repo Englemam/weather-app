@@ -1,10 +1,12 @@
 import { api } from './api';
 
+const { REACT_APP_API_KEY } = process.env;
+
 
 export const fetchCurrentWeatherInfo = async (location) => {
 
     try {
-        const response = await api.get(`weather?lat=${location.lat}&lon=${location.long}&appid=9997c56866a63215f905efd1be2db505&lang=pt_br&units=metric`)
+        const response = await api.get(`weather?lat=${location.lat}&lon=${location.long}&appid=${REACT_APP_API_KEY}&lang=pt_br&units=metric`)
 
         return response;
 
