@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import './styles.css';
 
 export default function Index({ weatherInfo }) {
@@ -21,3 +22,8 @@ export default function Index({ weatherInfo }) {
         </div>
     )
 }
+
+Index.propTypes = {
+    weatherInfo: PropTypes.object.isRequired
+}
+

@@ -45,5 +45,4 @@ Index.propTypes = {
   thirdIcon: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   isTemp: PropTypes.bool,
-
 }
